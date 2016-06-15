@@ -1,4 +1,7 @@
-##  Start Emacs
+# PEM files
+*.pem
+
+## Emacs
 *~
 \#*\#
 /.emacs.desktop
@@ -49,6 +52,9 @@ __pycache__/
 
 # C extensions
 *.so
+*.o
+*.a
+*.la
 
 # Distribution / packaging
 .Python
