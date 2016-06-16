@@ -19,12 +19,15 @@
   ec2:
     region: "{{ region }}"
     keypair: "{{ keypair }}"
+    vpc_subnet_id: "{{ vpc_subnet_id }}"
+    tenancy: "{{ tenancy }}"
     zone: "{{ zone }}"
     group: "{{ security_groups }}"
-    image: "{{ ami_result.results[0].ami_id }}"
+#    image: "{{ ami_result.results[0].ami_id }}"
+    image: "{{ ami }}"
 # No point in creating an expensive instance just during the AMI configuration phase - let the ASG do that
-#    instance_type: "{{ instance_type }}"
-    instance_type: "t2.micro"
+    instance_type: "{{ instance_type }}"
+#    instance_type: "t2.micro"
     instance_tags:
       Name: "{{ name }}"
     volumes: "{{ volumes }}"
