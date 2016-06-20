@@ -1,12 +1,4 @@
 ---
-# group_vars/all.yml
- 
-region:  us-east-1
-zone:    us-east-1b # zone that the master AMI will be configured in
-tenancy: default
-ami:     ami-6d1c2007  #CentOS 7 HVM with updates
-count:   1
-
 # move to specific group_vars dirs.. 
 volumes:
   - device_name: /dev/sda1
@@ -19,4 +11,6 @@ instance_type: m3.medium
 keypair: ansibletest
 security_groups: ['sg_cluster_master']
 vpc_subnet_id: subnet-657f293d
-group_name: cluster_test_
+group_name: cluster_master_group
+
+#iam_profile: "noaccess"

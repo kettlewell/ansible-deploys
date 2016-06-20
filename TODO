@@ -1,0 +1,17 @@
+So at this point I have fixed the VPC issue so that I can provision an ec2 instance ( old accounts don't have a default VPC, and need the internet gateway added )
+
+The following are on my current RADAR:
+
+1) create issues instead of a TODO list
+2) identify a secure way to shuffle sensitive AWS items ( security groups, keys, subnet ids, etc) so that they don't reside inside of Ansible ( Ansible vault should work )
+3) Create clean provisioning role 
+4) Create reusable scripts/playbooks to provision masters & slaves from the provision role.
+5) Create configure Ansible master role
+6) Create configure Spark master role
+7) Create configure Spark slave role
+8) remove Spark slaves 
+9) Autoscaling of spark slaves would rock
+10) Create security groups for spark masters, spark slaves
+11) create subnets for spark masters and spark slaves
+12) create IAM profile/user for spark master, spark slave and ansible master
+

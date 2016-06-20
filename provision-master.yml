@@ -1,0 +1,12 @@
+---
+# provision-master.yml
+
+  - hosts: localhost
+    connection: local
+    gather_facts: no
+    pre_tasks:
+       - name: include default step variables
+         include_vars: group_vars/cluster_master.yml
+    roles:
+      - role: ec2-provision
+        name: "{{ group_name }}"
